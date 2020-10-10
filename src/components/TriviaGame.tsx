@@ -24,7 +24,7 @@ interface Question {
 	incorrect_answers: string[];
 }
 
-const TriviaGame = () => {
+const TriviaGame: React.FC = () => {
 	const questions = useSelector((state) => state.questions);
 	const [ currentQuestion, setCurrentQuestion ] = useState<Question | null>(null);
 	const [ numAnswered, setNumAnswered ] = useState(0);
