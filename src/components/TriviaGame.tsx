@@ -41,7 +41,7 @@ const TriviaGame: React.FC = () => {
 			{numAnswered < 10 ? (
 				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
 			) : (
-				<Result answers={answers} />
+				<Result numCorrect={numCorrect} />
 			)}
 		</div>
 	);
