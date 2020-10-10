@@ -21,9 +21,10 @@ import { StoreType } from '../redux/store';
 import { QuestionType } from '../redux/types';
 
 // TODO
-// 1. Create QuizCard component
-// 2. Create Result component
-// 3. import each here
+// 1. Create Start component
+// 2. Create QuizCard component
+// 3. Create Result component
+// 4. import each here
 
 const TriviaGame: React.FC = () => {
 	const questions = useSelector((state: StoreType) => state.questions);
@@ -36,6 +37,14 @@ const TriviaGame: React.FC = () => {
 		setNumAnswered((answered) => answered++);
 		setCurrentQuestion(() => questions[numAnswered]);
 	};
+
+	if (!questions.length) {
+		return (
+			<div className="TriviaGame">
+				<Start />
+			</div>
+		);
+	}
 
 	return (
 		<div className="TriviaGame">
