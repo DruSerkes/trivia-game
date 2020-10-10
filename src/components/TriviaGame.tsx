@@ -18,6 +18,10 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { QuestionType } from '../redux/types';
+// TODO
+// 1. Create QuizCard component
+// 2. Create Result component
+// 3. import each here
 
 const TriviaGame: React.FC = () => {
 	const questions = useSelector((state) => state.questions);
