@@ -1,4 +1,5 @@
 export const ADD_QUESTIONS = 'ADD_QUESTIONS';
+export const QUESTIONS_FAIL = 'QUESTIONS_FAIL';
 
 interface Question {
 	question: string;
@@ -9,8 +10,12 @@ interface Question {
 
 interface AddQuestions {
 	type: typeof ADD_QUESTIONS;
-	payload: Question;
+	payload: Question[];
+}
+
+interface QuestionsFail {
+	type: typeof QUESTIONS_FAIL;
 }
 
 export type QuestionType = Question;
-export type AddQuestionsType = AddQuestions;
+export type QuestionsDispatchTypes = AddQuestions | QuestionsFail;

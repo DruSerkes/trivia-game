@@ -17,14 +17,16 @@
 */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { StoreType } from '../redux/store';
 import { QuestionType } from '../redux/types';
+
 // TODO
 // 1. Create QuizCard component
 // 2. Create Result component
 // 3. import each here
 
 const TriviaGame: React.FC = () => {
-	const questions = useSelector((state) => state.questions);
+	const questions = useSelector((state: StoreType) => state.questions);
 	const [ currentQuestion, setCurrentQuestion ] = useState<QuestionType | null>(null);
 	const [ numAnswered, setNumAnswered ] = useState(0);
 	const [ numCorrect, setNumCorrect ] = useState(0);
@@ -32,7 +34,7 @@ const TriviaGame: React.FC = () => {
 	const answerQuestion = (answer: string) => {
 		if (currentQuestion && answer === currentQuestion.correct_answer) setNumCorrect((correct) => correct++);
 		setNumAnswered((answered) => answered++);
-		setCurrentQuestion((prevQuestion) => questions[numAnswered]);
+		setCurrentQuestion(() => questions[numAnswered]);
 	};
 
 	return (
