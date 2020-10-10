@@ -17,21 +17,16 @@
 */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-
-interface Question {
-	question: string;
-	correct_answer: string;
-	incorrect_answers: string[];
-}
+import { QuestionType } from '../redux/types';
 
 const TriviaGame: React.FC = () => {
 	const questions = useSelector((state) => state.questions);
-	const [ currentQuestion, setCurrentQuestion ] = useState<Question | null>(null);
+	const [ currentQuestion, setCurrentQuestion ] = useState<QuestionType | null>(null);
 	const [ numAnswered, setNumAnswered ] = useState(0);
 	const [ numCorrect, setNumCorrect ] = useState(0);
 
-	const answerQuestion = ({ answer }) => {
-		if (answer === currentQuestion.correct_answer) setNumCorrect((correct) => correct++);
+	const answerQuestion = (answer: string) => {
+		if (currentQuestion && answer === currentQuestion.correct_answer) setNumCorrect((correct) => correct++);
 		setNumAnswered((answered) => answered++);
 		setCurrentQuestion((prevQuestion) => questions[numAnswered]);
 	};
