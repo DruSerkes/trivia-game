@@ -8,16 +8,17 @@ type QuizCardProps = {
 
 
 export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
-    // Render the 3 incorrect answers and the correct answer
-    // Do so with each being a separate Answer component
-    // Answer component should accept props for question and isCorrect (optional bool)
-    // When Answer is clicked, it should fire off answerQuestion with the answer passed in
+    // use shuffle helper to shuffle the answers 
+    // create some state for a single array with all the answers in random order
+    // Map over array to render Answer components
 
 
     return (
         <div className="QuizCard">
             <h4>{question?.question}</h4>
-            {/* RENDER 4 ANSWERS HERE */}
+            <ul className="QuizCardList">
+                {/* TODO RENDER 4 ANSWERS HERE */}
+            </ul>
         </div>
     )
 }
