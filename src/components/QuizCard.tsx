@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { QuestionType } from '../redux/types';
 
 type QuizCardProps = {
-    question: QuestionType;
+    question: QuestionType | null;
     answerQuestion: (answer: string) => void
 }
 

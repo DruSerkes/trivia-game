@@ -21,11 +21,8 @@ import { StoreType } from '../redux/store';
 import { QuestionType } from '../redux/types';
 import { Start } from './Start';
 import { Result } from './Result';
+import { QuizCard } from './QuizCard'
 
-// TODO
-// 2. Create QuizCard component
-// 3. Create Result component
-// 4. import each here
 
 const TriviaGame: React.FC = () => {
 	const questions = useSelector((state: StoreType) => state.questions);
