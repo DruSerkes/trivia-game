@@ -4,13 +4,12 @@ import { QuestionType } from '../redux/types';
 import { Answer } from './Answer'
 
 type QuizCardProps = {
-    question: QuestionType | null;
+    question: QuestionType;
     answerQuestion: (answer: string) => void
 }
 
 
 export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
-    if (!question) return null;
     let answers: string[] = question?.incorrect_answers.concat(question.correct_answer)
     answers = shuffle(answers)
 

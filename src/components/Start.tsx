@@ -1,13 +1,16 @@
 import * as React from 'react';
-import { useDispatch } from 'react-redux';
-import { getQuestions } from '../redux/actions';
+// import { useDispatch } from 'react-redux';
+// import { getQuestions } from '../redux/actions';
 
-export const Start: React.FC = () => {
-    const dispatch = useDispatch();
-    
+type StartProps = {
+    startGame: () => void
+}
+export const Start = ({ startGame }: StartProps) => {
+    // const dispatch = useDispatch();
+
     return (
         <div className="Start">
-            <button onClick={() => dispatch(getQuestions())}>Start Game</button>
-        </div>
+            <button onClick={startGame}>Start New Game</button>
+        </div >
     )
 }
