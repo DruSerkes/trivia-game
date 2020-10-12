@@ -11,7 +11,7 @@ import { getQuestions, removeQuestions } from '../redux/actions';
 const INITIAL_QUESTION_STATE = {
 	question: '',
 	correct_answer: '',
-	incorrect_answers: []
+	incorrect_answers: ['', '', '']
 }
 
 export const TriviaGame = () => {
@@ -34,8 +34,8 @@ export const TriviaGame = () => {
 		dispatch(removeQuestions())
 		dispatch(getQuestions());
 		setCurrentQuestion(() => INITIAL_QUESTION_STATE)
-		setNumAnswered(() => 0);
 		setNumCorrect(() => 0);
+		setNumAnswered(() => 0);
 	}
 
 	useEffect(() => {
@@ -45,7 +45,6 @@ export const TriviaGame = () => {
 
 	return (
 		<div className="TriviaGame">
-			{/* {!questions.length && <p>Loading &hellip;</p>} */}
 			{numAnswered < 10 ? (
 				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
 			) : (
