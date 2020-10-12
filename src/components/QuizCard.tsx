@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import { QuestionType } from '../redux/types';
 
 type QuizCardProps = {
@@ -17,7 +16,7 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
 
     return (
         <div className="QuizCard">
-            <h4>{question.question}</h4>
+            <h4>{question?.question}</h4>
             {/* RENDER 4 ANSWERS HERE */}
         </div>
     )
