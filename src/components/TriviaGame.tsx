@@ -19,6 +19,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { StoreType } from '../redux/store';
 import { QuestionType } from '../redux/types';
+import {Start} from './Start';
 
 // TODO
 // 2. Create QuizCard component

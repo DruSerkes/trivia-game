@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useDispatch } from 'react-redux';
 import { getQuestions } from '../redux/actions';
 
-const Start = () => {
+export const Start: React.FC = () => {
     const dispatch = useDispatch();
     
     return (
@@ -11,5 +11,3 @@ const Start = () => {
         </div>
     )
 }
-
-export default Start;
