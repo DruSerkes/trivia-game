@@ -5,7 +5,7 @@ import { QuizCard } from './QuizCard'
 import { useSelector, useDispatch } from 'react-redux'
 import { StoreType } from '../redux/store';
 import { Start } from '../components/Start';
-import { getQuestions } from '../redux/actions';
+import { getQuestions, removeQuestions } from '../redux/actions';
 
 
 const INITIAL_QUESTION_STATE = {
@@ -31,8 +31,9 @@ export const TriviaGame = () => {
 	};
 
 	const startGame = () => {
-		setCurrentQuestion(() => INITIAL_QUESTION_STATE)
+		dispatch(removeQuestions())
 		dispatch(getQuestions());
+		setCurrentQuestion(() => INITIAL_QUESTION_STATE)
 		setNumAnswered(() => 0);
 		setNumCorrect(() => 0);
 	}
@@ -44,13 +45,13 @@ export const TriviaGame = () => {
 
 	return (
 		<div className="TriviaGame">
-			{!questions.length && <Start startGame={startGame} />}
+			{/* {!questions.length && <p>Loading &hellip;</p>} */}
 			{numAnswered < 10 ? (
 				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
 			) : (
 					<Result numCorrect={numCorrect} />
 				)}
-			{numAnswered === 10 && <Start startGame={startGame} />}
+			{(numAnswered === 10 || !questions.length) && <Start startGame={startGame} />}
 		</div>
 
 	);

@@ -1,4 +1,5 @@
 export const ADD_QUESTIONS = 'ADD_QUESTIONS';
+export const REMOVE_QUESTIONS = 'REMOVE_QUESTIONS';
 export const QUESTIONS_FAIL = 'QUESTIONS_FAIL';
 
 interface Question {
@@ -17,5 +18,9 @@ interface QuestionsFail {
 	type: typeof QUESTIONS_FAIL;
 }
 
+interface RemoveQuestions {
+	type: typeof REMOVE_QUESTIONS;
+}
+
 export type QuestionType = Question;
-export type QuestionsDispatchTypes = AddQuestions | QuestionsFail;
+export type QuestionsDispatchTypes = AddQuestions | QuestionsFail | RemoveQuestions;
