@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { shuffle } from '../helpers/shuffle';
 import { QuestionType } from '../redux/types';
+import { Answer } from './Answer'
 
 type QuizCardProps = {
     question: QuestionType | null;
@@ -8,16 +10,15 @@ type QuizCardProps = {
 
 
 export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
-    // use shuffle helper to shuffle the answers 
-    // create some state for a single array with all the answers in random order
-    // Map over array to render Answer components
-
+    if (!question) return null;
+    let answers: string[] = question?.incorrect_answers.concat(question.correct_answer)
+    answers = shuffle(answers)
 
     return (
         <div className="QuizCard">
             <h4>{question?.question}</h4>
             <ul className="QuizCardList">
-                {/* TODO RENDER 4 ANSWERS HERE */}
+                {answers.map(ans => <Answer answerQuestion={answerQuestion} answer={ans} />)}
             </ul>
         </div>
     )
