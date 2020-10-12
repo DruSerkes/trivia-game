@@ -11,7 +11,7 @@ import { getQuestions, removeQuestions } from '../redux/actions';
 const INITIAL_QUESTION_STATE = {
 	question: '',
 	correct_answer: '',
-	incorrect_answers: ['', '', '']
+	incorrect_answers: [' ', '  ', '   ']
 }
 
 export const TriviaGame = () => {

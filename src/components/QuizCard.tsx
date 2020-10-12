@@ -15,9 +15,9 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
 
     return (
         <div className="QuizCard">
-            <h4>{question?.question}</h4>
+            <h4 dangerouslySetInnerHTML={{ __html: question?.question }} />
             <ul className="QuizCardList">
-                {answers.map(ans => <Answer answerQuestion={answerQuestion} answer={ans} />)}
+                {answers.map(ans => <Answer answerQuestion={answerQuestion} answer={ans} key={ans} />)}
             </ul>
         </div>
     )

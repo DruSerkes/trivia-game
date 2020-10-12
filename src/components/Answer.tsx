@@ -7,6 +7,6 @@ type AnswerProps = {
 
 export const Answer = ({ answer, answerQuestion }: AnswerProps) => {
     return (
-        <li className="Answer" onClick={() => answerQuestion(answer)}>{answer}</li>
+        <li className="Answer" onClick={() => answerQuestion(answer)} dangerouslySetInnerHTML={{ __html: answer }} />
     )
 }
