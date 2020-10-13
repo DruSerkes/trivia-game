@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TriviaGame tests matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="TriviaGame"
+  >
+    <div
+      class="QuizCard"
+    >
+      <h4 />
+      <ul
+        class="QuizCardList"
+      >
+        <li
+          class="Answer"
+        />
+      </ul>
+    </div>
+    <div
+      class="Start"
+    >
+      <button>
+        Start New Game
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

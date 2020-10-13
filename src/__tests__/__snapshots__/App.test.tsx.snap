@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders without breaking  1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <h1>
+      Trivia Game!
+    </h1>
+    <div
+      class="TriviaGame"
+    >
+      <div
+        class="QuizCard"
+      >
+        <h4 />
+        <ul
+          class="QuizCardList"
+        >
+          <li
+            class="Answer"
+          />
+        </ul>
+      </div>
+      <div
+        class="Start"
+      >
+        <button>
+          Start New Game
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
