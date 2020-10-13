@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Answer tests matches snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="Answer"
+  >
+    lets test
+  </li>
+</DocumentFragment>
+`;
