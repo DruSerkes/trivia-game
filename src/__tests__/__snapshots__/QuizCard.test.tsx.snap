@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuizCard Matches Snapshot  1`] = `
+<DocumentFragment>
+  <div
+    class="QuizCard"
+  >
+    <h4>
+      testing
+    </h4>
+    <ul
+      class="QuizCardList"
+    >
+      <li
+        class="Answer"
+      >
+        false too
+      </li>
+      <li
+        class="Answer"
+      >
+        true
+      </li>
+      <li
+        class="Answer"
+      >
+        also false
+      </li>
+      <li
+        class="Answer"
+      >
+        false
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
