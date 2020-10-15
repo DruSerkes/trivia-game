@@ -12,7 +12,7 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 const question: QuestionType = {
     question: 'testing',
     correct_answer: 'true',
-    incorrect_answers: ['false', 'false too', 'also false']
+    incorrect_answers: ['false', 'false', 'false']
 }
 test('QuizCard Matches Snapshot ', () => {
     const { asFragment } = render(

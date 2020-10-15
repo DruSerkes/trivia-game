@@ -3,12 +3,17 @@
 exports[`Result Matches Snapshot  1`] = `
 <DocumentFragment>
   <div
-    class="Result"
+    class="MuiBox-root MuiBox-root-1 Result"
   >
-    <h3>
+    <h3
+      class="MuiTypography-root MuiTypography-h3"
+    >
       Game Over!
     </h3>
-    <p>
+    <p
+      class="MuiTypography-root MuiTypography-body1"
+      style="color: blue;"
+    >
       You answered 666 correct
     </p>
   </div>

@@ -3,33 +3,51 @@
 exports[`QuizCard Matches Snapshot  1`] = `
 <DocumentFragment>
   <div
-    class="QuizCard"
+    class="MuiBox-root MuiBox-root-1 QuizCard"
   >
-    <h4>
+    <h5
+      class="MuiTypography-root MuiTypography-h5"
+    >
       testing
-    </h4>
+    </h5>
     <ul
-      class="QuizCardList"
+      class="MuiList-root QuizCardList MuiList-padding"
     >
       <li
-        class="Answer"
+        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
       >
-        false too
+        <span
+          class="AnswerText"
+        >
+          false
+        </span>
       </li>
       <li
-        class="Answer"
+        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
       >
-        true
+        <span
+          class="AnswerText"
+        >
+          false
+        </span>
       </li>
       <li
-        class="Answer"
+        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
       >
-        also false
+        <span
+          class="AnswerText"
+        >
+          false
+        </span>
       </li>
       <li
-        class="Answer"
+        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
       >
-        false
+        <span
+          class="AnswerText"
+        >
+          true
+        </span>
       </li>
     </ul>
   </div>

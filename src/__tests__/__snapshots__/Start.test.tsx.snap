@@ -3,10 +3,21 @@
 exports[`Start Matches Snapshot  1`] = `
 <DocumentFragment>
   <div
-    class="Start"
+    class="MuiBox-root MuiBox-root-1 Start"
   >
-    <button>
-      Start New Game
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Start New Game
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
     </button>
   </div>
 </DocumentFragment>

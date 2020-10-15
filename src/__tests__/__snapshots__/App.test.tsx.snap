@@ -3,31 +3,32 @@
 exports[`App renders without breaking  1`] = `
 <DocumentFragment>
   <div
-    class="App"
+    class="MuiBox-root MuiBox-root-1 App"
   >
-    <h1>
+    <h1
+      class="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom"
+    >
       Trivia Game!
     </h1>
     <div
-      class="TriviaGame"
+      class="MuiBox-root MuiBox-root-2 TriviaGame"
     >
       <div
-        class="QuizCard"
+        class="MuiBox-root MuiBox-root-3 Start"
       >
-        <h4 />
-        <ul
-          class="QuizCardList"
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+          tabindex="0"
+          type="button"
         >
-          <li
-            class="Answer"
+          <span
+            class="MuiButton-label"
+          >
+            Start New Game
+          </span>
+          <span
+            class="MuiTouchRipple-root"
           />
-        </ul>
-      </div>
-      <div
-        class="Start"
-      >
-        <button>
-          Start New Game
         </button>
       </div>
     </div>
