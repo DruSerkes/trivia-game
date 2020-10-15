@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ListItem } from '@material-ui/core'
 
 type AnswerProps = {
     answer: string;
@@ -6,7 +7,8 @@ type AnswerProps = {
 }
 
 export function Answer({ answer, answerQuestion }: AnswerProps) {
+    const renderHTML = () => (<span className="AnswerText" dangerouslySetInnerHTML={{ __html: answer }} />)
     return (
-        <li className="Answer" onClick={() => answerQuestion(answer)} dangerouslySetInnerHTML={{ __html: answer }} />
+        <ListItem className="Answer" button divider onClick={() => answerQuestion(answer)}>{renderHTML()}</ListItem>
     );
 }
