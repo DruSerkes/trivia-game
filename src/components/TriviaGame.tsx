@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { StoreType } from '../redux/store';
 import { Start } from '../components/Start';
 import { getQuestions, removeQuestions } from '../redux/actions';
+import { Box } from '@material-ui/core'
 
 
 const INITIAL_QUESTION_STATE = {
@@ -44,14 +45,14 @@ export const TriviaGame = () => {
 
 
 	return (
-		<div className="TriviaGame">
+		<Box className="TriviaGame">
 			{numAnswered < 10 ? (
 				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
 			) : (
 					<Result numCorrect={numCorrect} />
 				)}
 			{(numAnswered === 10 || !questions.length) && <Start startGame={startGame} />}
-		</div>
+		</Box>
 
 	);
 };
