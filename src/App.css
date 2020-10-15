@@ -67,4 +67,7 @@ html {
 	.Start button {
 		font-size: 1rem;
 	}
+	.QuizCard {
+		width: 90%;
+	}
 }
