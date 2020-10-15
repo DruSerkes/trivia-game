@@ -46,11 +46,12 @@ export const TriviaGame = () => {
 
 	return (
 		<Box className="TriviaGame">
-			{numAnswered < 10 ? (
+			{numAnswered < 10 && currentQuestion !== INITIAL_QUESTION_STATE && (
 				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
-			) : (
-					<Result numCorrect={numCorrect} />
-				)}
+			)}
+			{ numAnswered === 10 && (
+				<Result numCorrect={numCorrect} />
+			)}
 			{(numAnswered === 10 || !questions.length) && <Start startGame={startGame} />}
 		</Box>
 
