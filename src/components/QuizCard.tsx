@@ -16,7 +16,7 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
 
     return (
         <Box className="QuizCard">
-            <Typography variant="h4" dangerouslySetInnerHTML={{ __html: question?.question }} />
+            <Typography variant="h5" dangerouslySetInnerHTML={{ __html: question?.question }} />
             <List className="QuizCardList">{answers.map(ans => <Answer answerQuestion={answerQuestion} answer={ans} key={ans} />)}</List>
         </Box>
     )
