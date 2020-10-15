@@ -2,6 +2,7 @@ import * as React from 'react';
 import { shuffle } from '../helpers/shuffle';
 import { QuestionType } from '../redux/types';
 import { Answer } from './Answer'
+import { Box, Typography, List } from '@material-ui/core'
 
 type QuizCardProps = {
     question: QuestionType;
@@ -14,11 +15,11 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
     answers = shuffle(answers)
 
     return (
-        <div className="QuizCard">
-            <h4 dangerouslySetInnerHTML={{ __html: question?.question }} />
-            <ul className="QuizCardList">
+        <Box className="QuizCard">
+            <Typography variant="h4" dangerouslySetInnerHTML={{ __html: question?.question }} />
+            <List className="QuizCardList">
                 {answers.map(ans => <Answer answerQuestion={answerQuestion} answer={ans} key={ans} />)}
-            </ul>
-        </div>
+            </List>
+        </Box>
     )
 }
