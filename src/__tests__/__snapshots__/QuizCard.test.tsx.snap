@@ -19,34 +19,34 @@ exports[`QuizCard Matches Snapshot  1`] = `
         <span
           class="AnswerText"
         >
-          false
-        </span>
-      </li>
-      <li
-        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
-      >
-        <span
-          class="AnswerText"
-        >
-          false
-        </span>
-      </li>
-      <li
-        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
-      >
-        <span
-          class="AnswerText"
-        >
-          false
-        </span>
-      </li>
-      <li
-        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
-      >
-        <span
-          class="AnswerText"
-        >
           true
+        </span>
+      </li>
+      <li
+        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+      >
+        <span
+          class="AnswerText"
+        >
+          false
+        </span>
+      </li>
+      <li
+        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+      >
+        <span
+          class="AnswerText"
+        >
+          falsey
+        </span>
+      </li>
+      <li
+        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+      >
+        <span
+          class="AnswerText"
+        >
+          false-ish
         </span>
       </li>
     </ul>
