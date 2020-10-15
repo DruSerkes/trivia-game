@@ -5,6 +5,17 @@
 	height: 100vh;
 }
 
+.Start {
+	position: relative;
+	top: 100px;
+	width: 30%;
+	margin: 0 auto;
+}
+
+.Start button {
+	font-size: 1.5rem;
+}
+
 .QuizCard {
 	background-color: dimgray;
     width: 69%;
@@ -25,7 +36,7 @@
 }
 
 .Result {
-	margin: 2rem;
+	margin: 2rem auto 0;
     min-height: 200px;
     display: flex;
     flex-direction: column;

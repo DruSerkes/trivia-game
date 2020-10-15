@@ -9,7 +9,7 @@ export const Start = ({ startGame }: StartProps) => {
 
     return (
         <Box className="Start">
-            <Button variant="contained" color="primary" onClick={startGame}>Start New Game</Button>
+            <Button variant="contained" fullWidth color="primary" onClick={startGame}>Start New Game</Button>
         </Box >
     )
 }
