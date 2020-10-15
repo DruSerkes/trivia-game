@@ -9,6 +9,6 @@ type AnswerProps = {
 export function Answer({ answer, answerQuestion }: AnswerProps) {
     const renderHTML = () => (<span className="AnswerText" dangerouslySetInnerHTML={{ __html: answer }} />)
     return (
-        <ListItem className="Answer" button divider onClick={() => answerQuestion(answer)}>{renderHTML()}</ListItem>
+        <ListItem className="Answer" divider onClick={() => answerQuestion(answer)}>{renderHTML()}</ListItem>
     );
 }

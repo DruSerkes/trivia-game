@@ -2,6 +2,16 @@
 	text-align: center;
 }
 
+.Answer {
+	cursor: pointer;
+}
+
+.AnswerText {
+	margin: 1.25rem auto;
+    font-size: 19px;
+    color: limegreen;
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
