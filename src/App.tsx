@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { TriviaGame } from './components/TriviaGame';
+import { Typography, Box } from '@material-ui/core'
 
 /* TODO 
 1. Refactor with MUI components 
@@ -9,10 +10,10 @@ import { TriviaGame } from './components/TriviaGame';
 */
 function App() {
       return (
-            <div className="App">
-                  <h1>Trivia Game!</h1>
+            <Box className="App">
+                  <Typography variant="h1">Trivia Game!</Typography>
                   <TriviaGame />
-            </div>);
+            </Box>);
 }
 
 export default App;
