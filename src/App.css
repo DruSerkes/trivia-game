@@ -1,6 +1,6 @@
 .App {
 	text-align: center;
-	background-color: black;
+	background-color: #181818;
 	color: whitesmoke;
 	height: 100vh;
 }
@@ -22,6 +22,14 @@
 	margin: 1.25rem auto;
     font-size: 19px;
     color: lawngreen;
+}
+
+.Result {
+	margin: 2rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 @keyframes App-logo-spin {

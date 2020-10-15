@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Box, Typography } from '@material-ui/core'
 
 type ResultTypes = {
     numCorrect: number
@@ -6,9 +7,9 @@ type ResultTypes = {
 
 export const Result = ({ numCorrect }: ResultTypes) => {
     return (
-        <div className="Result">
-            <h3>Game Over!</h3>
-            <p>You answered {numCorrect} correct</p>
-        </div>
+        <Box className="Result">
+            <Typography variant="h3">Game Over!</Typography>
+            <Typography variant="body1">You answered {numCorrect} correct</Typography>
+        </Box>
     )
 }
