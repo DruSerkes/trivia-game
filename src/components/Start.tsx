@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Box, Button } from '@material-ui/core'
 
 type StartProps = {
     startGame: () => void
@@ -7,8 +8,8 @@ type StartProps = {
 export const Start = ({ startGame }: StartProps) => {
 
     return (
-        <div className="Start">
-            <button onClick={startGame}>Start New Game</button>
-        </div >
+        <Box className="Start">
+            <Button variant="contained" color="primary" onClick={startGame}>Start New Game</Button>
+        </Box >
     )
 }
