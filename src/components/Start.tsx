@@ -12,9 +12,8 @@ export const Start = ({ startGame }: StartProps) => {
 
     const handleChangeAmount = (e: React.ChangeEvent<HTMLInputElement>): void => setAmount(e.target.value)
     const handleChangeDifficulty = (e: React.ChangeEvent<HTMLInputElement>): void => setDifficulty(e.target.value)
-    const handleSubmit = () => {
-        startGame(amount, difficulty)
-    }
+    const handleSubmit = () => startGame(amount, difficulty)
+
     return (
         <Box className="Start">
             <TextField label="Number of Questions" type="number" value={amount} onChange={handleChangeAmount} />
