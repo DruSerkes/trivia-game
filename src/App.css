@@ -1,3 +1,8 @@
+:root {
+	--background-active : dimgray;
+	--primary-color-text: whitesmoke;
+}
+
 html {
 	min-height: 100vh;
 	height: fit-content;
@@ -6,7 +11,7 @@ html {
 .App {
 	text-align: center;
 	background-color: #181818;
-	color: whitesmoke;
+	color: var(--primary-color-text);
 	min-height: 100vh;
 	height: 100%;
 	padding: 1.25rem;
@@ -15,8 +20,26 @@ html {
 .Start {
 	position: relative;
 	top: 100px;
-	width: 30%;
+	width: 35%;
 	margin: 0 auto;
+	padding: 1.5rem;
+	border-radius: 10px;
+	background-color: var(--background-active);
+	color: var(--primary-color-text);
+}
+
+.Start fieldset{
+	margin: 0 0 1rem 2rem;
+}
+
+.Start legend {
+	color: var(--primary-color-text);
+	text-decoration: underline;
+}
+
+.Start label {
+	color: var(--primary-color-text);
+	text-decoration: underline;
 }
 
 .Start button {
@@ -24,7 +47,7 @@ html {
 }
 
 .QuizCard {
-	background-color: dimgray;
+	background-color: var(--background-active);
     width: 69%;
     margin: 0 auto;
     padding: 1rem 1rem 0;
@@ -69,5 +92,8 @@ html {
 	}
 	.QuizCard {
 		width: 90%;
+	}
+	.Start fieldset{
+		margin: 2rem;
 	}
 }
