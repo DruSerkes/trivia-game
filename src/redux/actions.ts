@@ -3,12 +3,19 @@ import { Dispatch } from 'redux';
 
 const BASE_URL = `https://opentdb.com/api.php`;
 
-export function getQuestions(amount = 10, type = 'multiple') {
+export function getQuestions(amount = '10', difficulty?: string, type = 'multiple',) {
 	return async function (dispatch: Dispatch) {
 		try {
-			const response = await fetch(`${BASE_URL}?amount=${amount}&type=${type}`);
-			const data = await response.json();
-			dispatch(gotQuestions(data));
+			if (difficulty) {
+				const response = await fetch(`${BASE_URL}?amout=${amount}&difficulty=${difficulty}&type=${type}`);
+				const data = await response.json();
+				dispatch(gotQuestions(data));
+			} else {
+				const response = await fetch(`${BASE_URL}?amount=${amount}&type=${type}`);
+				const data = await response.json();
+				dispatch(gotQuestions(data));
+			}
+
 		} catch (e) {
 			console.log(e);
 			dispatch(questionsFail());

@@ -31,9 +31,9 @@ export const TriviaGame = () => {
 		}
 	};
 
-	const startGame = () => {
+	const startGame = (amount: string): void => {
 		dispatch(removeQuestions())
-		dispatch(getQuestions());
+		dispatch(getQuestions(amount));
 		setCurrentQuestion(() => INITIAL_QUESTION_STATE)
 		setNumCorrect(() => 0);
 		setNumAnswered(() => 0);
@@ -46,13 +46,13 @@ export const TriviaGame = () => {
 
 	return (
 		<Box className="TriviaGame">
-			{numAnswered < 10 && currentQuestion !== INITIAL_QUESTION_STATE && (
+			{numAnswered < questions.length && currentQuestion !== INITIAL_QUESTION_STATE &&
 				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
-			)}
-			{ numAnswered === 10 && (
+			}
+			{ questions.length !== 0 && numAnswered === questions.length && (
 				<Result numCorrect={numCorrect} />
 			)}
-			{(numAnswered === 10 || !questions.length) && <Start startGame={startGame} />}
+			{(numAnswered === questions.length || !questions.length) && <Start startGame={startGame} />}
 		</Box>
 
 	);
