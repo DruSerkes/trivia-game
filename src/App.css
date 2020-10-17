@@ -28,12 +28,16 @@ html {
 }
 
 .Start fieldset{
-	margin: 0 0 1rem 2rem;
+	margin: 1rem;
 }
 
 .Start legend {
 	color: var(--primary-color-text);
 	text-decoration: underline;
+}
+
+.Start span {
+	font-size: 0.75rem;
 }
 
 .Start label {
@@ -43,6 +47,12 @@ html {
 
 .Start button {
 	font-size: 1.5rem;
+}
+
+.MuiFormGroup-row {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
 }
 
 .QuizCard {
@@ -94,5 +104,8 @@ html {
 	}
 	.Start fieldset{
 		margin: 2rem;
+	}
+	.MuiFormGroup-row {
+		justify-content: left;
 	}
 }

@@ -19,11 +19,11 @@ export const Start = ({ startGame }: StartProps) => {
             <TextField label="Number of Questions" type="number" value={amount} onChange={handleChangeAmount} />
             <FormControl component="fieldset">
                 <FormLabel component="legend">Difficulty</FormLabel>
-                <RadioGroup aria-label="difficulty" name="difficulty" value={difficulty} onChange={handleChangeDifficulty}>
-                    <FormControlLabel value="" control={<Radio />} label="Surprise Me!" />
-                    <FormControlLabel value="easy" control={<Radio />} label="Easy" />
-                    <FormControlLabel value="medium" control={<Radio />} label="Medium" />
-                    <FormControlLabel value="hard" control={<Radio />} label="Hard" />
+                <RadioGroup row aria-label="difficulty" name="difficulty" value={difficulty} onChange={handleChangeDifficulty}>
+                    <FormControlLabel value="easy" control={<Radio />} label="Easy" labelPlacement="end" />
+                    <FormControlLabel value="medium" control={<Radio />} label="Medium" labelPlacement="end" />
+                    <FormControlLabel value="hard" control={<Radio />} label="Hard" labelPlacement="end" />
+                    <FormControlLabel value="" control={<Radio />} label="Surprise Me!" labelPlacement="end" />
                 </RadioGroup>
             </FormControl>
             <Button variant="contained" fullWidth color="primary" onClick={handleSubmit}>Start New Game</Button>
