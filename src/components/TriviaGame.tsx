@@ -31,9 +31,9 @@ export const TriviaGame = () => {
 		}
 	};
 
-	const startGame = (amount: string): void => {
+	const startGame = (amount: string, difficulty: string): void => {
 		dispatch(removeQuestions())
-		dispatch(getQuestions(amount));
+		dispatch(getQuestions(amount, difficulty));
 		setCurrentQuestion(() => INITIAL_QUESTION_STATE)
 		setNumCorrect(() => 0);
 		setNumAnswered(() => 0);

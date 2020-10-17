@@ -7,7 +7,7 @@ export function getQuestions(amount = '10', difficulty?: string, type = 'multipl
 	return async function (dispatch: Dispatch) {
 		try {
 			if (difficulty) {
-				const response = await fetch(`${BASE_URL}?amout=${amount}&difficulty=${difficulty}&type=${type}`);
+				const response = await fetch(`${BASE_URL}?amount=${amount}&type=${type}&difficulty=${difficulty}`);
 				const data = await response.json();
 				dispatch(gotQuestions(data));
 			} else {
