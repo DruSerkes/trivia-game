@@ -14,7 +14,7 @@ exports[`Result Matches Snapshot  1`] = `
       class="MuiTypography-root MuiTypography-body1"
       style="color: blue;"
     >
-      You answered 666 correct
+      You answered 666 out of 667 correct
     </p>
   </div>
 </DocumentFragment>
