@@ -4,19 +4,31 @@ import { ListItem } from '@material-ui/core'
 type AnswerProps = {
     answer: string;
     answerQuestion: (answer: string) => void;
-    correct: boolean | null;
+    correct?: boolean | null;
 }
 
 export function Answer({ answer, answerQuestion, correct }: AnswerProps) {
     const renderHTML = () => (<span className="AnswerText" dangerouslySetInnerHTML={{ __html: answer }} />)
-    handleClick = (e: React.MouseEvent<HTMLLIElement>) => {
-        console.log(e.target);
-        // document.getElementById(`${answer}`)
-        // if (correct) e.target.push()
+    const handleClick = ({ nativeEvent: e }: React.MouseEvent) => {
+        if (!e.target) return;
+        const { classList, tagName, parentElement } = e.target as HTMLLIElement;
+        if (correct) {
+            if (tagName === 'LI') {
+                classList.add('correct')
+            } else {
+                parentElement?.classList.add('correct');;
+            }
+        } else {
+            if (tagName === 'LI') {
+                classList.add('incorrect')
+            } else {
+                parentElement?.classList.add('incorrect');;
+            }
+        }
     }
     return (
-        // <ListItem id={answer} className="Answer" divider onClick={handleClick}>{renderHTML()}</ListItem>
+        <ListItem id={answer} className="Answer" divider onClick={handleClick}>{renderHTML()}</ListItem>
 
-        <ListItem className="Answer" divider onClick={() => answerQuestion(answer)}>{renderHTML()}</ListItem>
+        // <ListItem className="Answer" divider onClick={() => answerQuestion(answer)}>{renderHTML()}</ListItem>
     );
 }
