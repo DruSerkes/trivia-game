@@ -25,6 +25,7 @@ export function Answer({ answer, answerQuestion, correct }: AnswerProps) {
                 parentElement?.classList.add('incorrect');;
             }
         }
+        setTimeout(() => answerQuestion(answer), 800);
     }
     return (
         <ListItem id={answer} className="Answer" divider onClick={handleClick}>{renderHTML()}</ListItem>
