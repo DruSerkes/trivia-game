@@ -50,7 +50,7 @@ export const TriviaGame = () => {
 				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
 			}
 			{ questions.length !== 0 && numAnswered === questions.length && (
-				<Result numCorrect={numCorrect} />
+				<Result numCorrect={numCorrect} numAnswered={numAnswered} />
 			)}
 			{(numAnswered === questions.length || !questions.length) && <Start startGame={startGame} />}
 		</Box>
