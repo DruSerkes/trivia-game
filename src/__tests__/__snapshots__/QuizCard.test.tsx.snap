@@ -4,6 +4,7 @@ exports[`QuizCard Matches Snapshot  1`] = `
 <DocumentFragment>
   <div
     class="MuiBox-root MuiBox-root-1 QuizCard"
+    data-testid="QuizTest"
   >
     <h5
       class="MuiTypography-root MuiTypography-h5"

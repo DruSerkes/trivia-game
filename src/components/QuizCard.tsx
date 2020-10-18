@@ -15,7 +15,7 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
     answers = shuffle(answers)
 
     return (
-        <Box className="QuizCard">
+        <Box className="QuizCard" data-testid="QuizTest">
             <Typography variant="h5" dangerouslySetInnerHTML={{ __html: question?.question }} />
             <List className="QuizCardList">{answers.map(ans => <Answer answerQuestion={answerQuestion} answer={ans} key={ans} />)}</List>
         </Box>
