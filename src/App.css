@@ -66,12 +66,14 @@ html {
 
 .Answer {
 	cursor: pointer;
+	border-radius: 5px;
 }
 
 .AnswerText {
 	margin: 1.25rem auto;
     font-size: 19px;
-    color: lawngreen;
+	color: var(--primary-color-text);
+	font-style: oblique;
 }
 
 .Result {
@@ -80,6 +82,14 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.correct {
+	background-color: blue;
+}
+
+.incorrect {
+	background-color: red;
 }
 
 @keyframes App-logo-spin {
