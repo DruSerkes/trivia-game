@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ListItem } from '@material-ui/core'
+import { addClass } from '../helpers/addClass'
 
 type AnswerProps = {
     answer: string;
@@ -13,17 +14,9 @@ export function Answer({ answer, answerQuestion, correct }: AnswerProps) {
         if (!e.target) return;
         const { classList, tagName, parentElement } = e.target as HTMLLIElement;
         if (correct) {
-            if (tagName === 'LI') {
-                classList.add('correct')
-            } else {
-                parentElement?.classList.add('correct');;
-            }
+            addClass('correct', tagName, classList, parentElement)
         } else {
-            if (tagName === 'LI') {
-                classList.add('incorrect')
-            } else {
-                parentElement?.classList.add('incorrect');;
-            }
+            addClass('incorrect', tagName, classList, parentElement)
         }
         setTimeout(() => answerQuestion(answer), 800);
     }
