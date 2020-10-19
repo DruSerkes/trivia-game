@@ -7,6 +7,7 @@ type AnswerProps = {
     correct?: boolean | null;
 }
 
+// TODO: if correct, render it with a ref for correct answer 
 export function Answer({ answer, handleAnswerQuestion, correct }: AnswerProps) {
     const renderHTML = () => (<span className="AnswerText" dangerouslySetInnerHTML={{ __html: answer }} />);
     const handleClick = ({ nativeEvent: e }: React.MouseEvent) => (handleAnswerQuestion(answer, e, correct));

@@ -11,7 +11,11 @@ type QuizCardProps = {
     answerQuestion: (answer: string) => void
 }
 
-
+// TODO: update handleAnswerQuestion:
+// - if not correct, 
+// - find the html element with the correct ref
+// - add a class to it "show-correct"
+// - style "show-correct" class to have a green border 
 export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
     const chosen = useRef(false);
     const answers: string[] = question?.incorrect_answers.concat(question.correct_answer);
