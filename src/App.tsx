@@ -4,7 +4,9 @@ import { TriviaGame } from './components/TriviaGame';
 import { Typography, Box } from '@material-ui/core'
 
 /* TODO 
-3. Add next features 
+1. Add user can decide type (set type='boolean' in API call based on user input)
+2. Add feedback text for correct / incorrect 
+3. Refactor to show which was correct if incorrect was chosen... (give it a 1px green border)
 */
 function App() {
       return (

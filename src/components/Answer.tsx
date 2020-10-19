@@ -16,7 +16,5 @@ export function Answer({ answer, answerQuestion, correct }: AnswerProps) {
     }
     return (
         <ListItem id={answer} className="Answer" divider onClick={handleClick}>{renderHTML()}</ListItem>
-
-        // <ListItem className="Answer" divider onClick={() => answerQuestion(answer)}>{renderHTML()}</ListItem>
     );
 }
