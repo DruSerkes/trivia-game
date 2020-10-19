@@ -23,4 +23,18 @@ describe('helpers tests', () => {
         addClass('correct', testElement.tagName, testElement.classList);
         expect(testElement.classList).toContain('correct');
     })
+
+    test('showIfCorrect adds correct', () => {
+        const testElement = document.createElement('li');
+        testElement.addEventListener('click', (e) => showIfCorrect(e, true));
+        testElement.click();
+        expect(testElement.classList).toContain('correct');
+    })
+
+    test('showIfCorrect adds incorrect', () => {
+        const testElement = document.createElement('li');
+        testElement.addEventListener('click', (e) => showIfCorrect(e, false));
+        testElement.click();
+        expect(testElement.classList).toContain('incorrect');
+    })
 })
