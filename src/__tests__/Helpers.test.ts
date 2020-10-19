@@ -1,5 +1,6 @@
 import { renderColor } from '../helpers/renderColor'
 import { shuffle } from '../helpers/shuffle'
+import { addClass, showIfCorrect } from '../helpers/addClass'
 
 
 describe('helpers tests', () => {
@@ -15,5 +16,11 @@ describe('helpers tests', () => {
         expect(renderColor(6)).toEqual('yellow');
         expect(renderColor(8)).toEqual('green');
         expect(renderColor(10)).toEqual('blue')
+    })
+
+    test('addClass', () => {
+        const testElement = document.createElement('li');
+        addClass('correct', testElement.tagName, testElement.classList);
+        expect(testElement.classList).toContain('correct');
     })
 })
