@@ -14,8 +14,8 @@ type QuizCardProps = {
 
 export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
     const chosen = useRef(false);
-    let answers: string[] = question?.incorrect_answers.concat(question.correct_answer);
-    answers = shuffle(answers);
+    const answers: string[] = question?.incorrect_answers.concat(question.correct_answer);
+    const shuffledAnswers: string[] = shuffle(answers);
 
     const handleAnswerQuestion = (answer: string, e: MouseEvent, correct: boolean | null | undefined): void => {
         if (chosen.current) return;
@@ -31,7 +31,7 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
         <Box className="QuizCard" data-testid="QuizTest">
             <Typography variant="h5" dangerouslySetInnerHTML={{ __html: question?.question }} />
             <List className="QuizCardList">
-                {answers.map(ans => {
+                {shuffledAnswers.map(ans => {
                     if (ans === question.correct_answer) {
                         return <Answer handleAnswerQuestion={handleAnswerQuestion} answer={ans} key={ans} correct />
                     } else {
