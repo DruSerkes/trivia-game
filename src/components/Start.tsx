@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Box, Button, TextField, FormControl, RadioGroup, FormControlLabel, Radio, FormLabel } from '@material-ui/core'
 
 type StartProps = {
-    startGame: (amount: string, difficulty: string) => void
+    startGame: (amount: string, difficulty: string, type: string) => void
 }
 
 export const Start = ({ startGame }: StartProps) => {
@@ -14,7 +14,7 @@ export const Start = ({ startGame }: StartProps) => {
     const handleChangeAmount = (e: React.ChangeEvent<HTMLInputElement>): void => setAmount(e.target.value);
     const handleChangeDifficulty = (e: React.ChangeEvent<HTMLInputElement>): void => setDifficulty(e.target.value);
     const handleChangeType = (e: React.ChangeEvent<HTMLInputElement>): void => setType(e.target.value);
-    const handleSubmit = () => startGame(amount, difficulty, type)
+    const handleSubmit = () => startGame(amount, difficulty, type);
 
     return (
         <Box className="Start">

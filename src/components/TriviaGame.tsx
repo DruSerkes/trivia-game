@@ -31,10 +31,10 @@ export const TriviaGame = () => {
 		}
 	};
 
-	const startGame = (amount: string, difficulty: string): void => {
+	const startGame = (amount: string, difficulty: string, type: string): void => {
 		dispatch(removeQuestions())
-		dispatch(getQuestions(amount, difficulty));
-		setCurrentQuestion(() => INITIAL_QUESTION_STATE)
+		dispatch(getQuestions(amount, difficulty, type));
+		setCurrentQuestion(() => INITIAL_QUESTION_STATE);
 		setNumCorrect(() => 0);
 		setNumAnswered(() => 0);
 	}
