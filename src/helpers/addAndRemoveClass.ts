@@ -33,3 +33,11 @@ export const removeFeedback = (e: MouseEvent, correct?: Boolean | null): void =>
         removeClassFromAnswer('incorrect', tagName, classList, parentElement);
     }
 }
+
+export const removeClassFromAnswers = () => {
+    const answerElements = document.querySelectorAll('.Answer');
+    Array.from(answerElements).forEach((el) => {
+        el.classList.remove('correct');
+        el.classList.remove('incorrect');
+    });
+}
