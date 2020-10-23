@@ -21,11 +21,10 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
     const answers: string[] = question?.incorrect_answers.concat(question.correct_answer);
     const shuffledAnswers: string[] = shuffle(answers);
 
-    // TODO fix logic here so T/F answers don't retain their classes from showIfCorrect*** 
     const handleAnswerQuestion = (answer: string, e: MouseEvent, correct: boolean | null | undefined): void => {
         if (chosen.current) return;
         chosen.current = true;
-        showIfCorrect(e, correct)
+        showIfCorrect(e, correct);
         setTimeout(() => {
             answerQuestion(answer);
             chosen.current = false;

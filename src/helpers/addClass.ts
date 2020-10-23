@@ -18,9 +18,9 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
     if (!e.target) return;
     const { classList, tagName, parentElement } = e.target as HTMLLIElement;
     if (correct) {
-        addClassToAnswer('correct', tagName, classList, parentElement)
+        addClassToAnswer('correct', tagName, classList, parentElement);
     } else {
-        addClassToAnswer('incorrect', tagName, classList, parentElement)
+        addClassToAnswer('incorrect', tagName, classList, parentElement);
     }
 }
 
@@ -30,6 +30,6 @@ export const removeFeedback = (e: MouseEvent, correct?: Boolean | null): void =>
     if (correct) {
         removeClassFromAnswer('correct', tagName, classList, parentElement);
     } else {
-        removeClassFromAnswer('incorrect', tagName, classList, parentElement)
+        removeClassFromAnswer('incorrect', tagName, classList, parentElement);
     }
 }

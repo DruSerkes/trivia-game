@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { ListItem } from '@material-ui/core'
 
 type AnswerProps = {
@@ -9,10 +10,22 @@ type AnswerProps = {
 
 // TODO: if correct, render it with a ref for correct answer 
 export function Answer({ answer, handleAnswerQuestion, correct }: AnswerProps) {
+    const [mounted, setMounted] = useState(true);
     const renderHTML = () => (<span className="AnswerText" dangerouslySetInnerHTML={{ __html: answer }} />);
-    const handleClick = ({ nativeEvent: e }: React.MouseEvent) => (handleAnswerQuestion(answer, e, correct));
+    const handleClick = ({ nativeEvent: e }: React.MouseEvent) => {
+        handleAnswerQuestion(answer, e, correct);
+        setTimeout(() => setMounted(!mounted), 500)
+    };
+
+    useEffect(() => {
+        const answerElements = document.querySelectorAll('.Answer');
+        Array.from(answerElements).forEach((el) => {
+            el.classList.remove('correct');
+            el.classList.remove('incorrect');
+        })
+    }, [mounted])
 
     return (
-        <ListItem id={answer} className="Answer" divider onClick={handleClick}>{renderHTML()}</ListItem>
+        <ListItem id={answer} className="Answer" divider onClick={handleClick} >{renderHTML()}</ListItem>
     );
 }
