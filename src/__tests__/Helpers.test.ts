@@ -1,6 +1,6 @@
 import { renderColor } from '../helpers/renderColor'
 import { shuffle } from '../helpers/shuffle'
-import { addClass, showIfCorrect } from '../helpers/addClass'
+import { addClassToAnswer, showIfCorrect, removeClassFromAnswer } from '../helpers/addClass'
 
 
 describe('helpers tests', () => {
@@ -18,10 +18,19 @@ describe('helpers tests', () => {
         expect(renderColor(10)).toEqual('blue')
     })
 
-    test('addClass', () => {
+    test('addClassToAnswer', () => {
         const testElement = document.createElement('li');
-        addClass('correct', testElement.tagName, testElement.classList);
+        addClassToAnswer('correct', testElement.tagName, testElement.classList);
         expect(testElement.classList).toContain('correct');
+    })
+
+    test('removeClassFromAnswer', () => {
+        const testElement = document.createElement('li');
+        const testClass = 'incorrect'
+        addClassToAnswer(testClass, testElement.tagName, testElement.classList);
+        expect(testElement.classList).toContain(testClass);
+        removeClassFromAnswer(testClass, testElement.tagName, testElement.classList);
+        expect(testElement.classList).not.toContain(testClass);
     })
 
     test('showIfCorrect adds correct', () => {
