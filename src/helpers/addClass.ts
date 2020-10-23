@@ -24,4 +24,12 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
     }
 }
 
-// TODO export const removeFeedback
+export const removeFeedback = (e: MouseEvent, correct?: Boolean | null): void => {
+    if (!e.target) return;
+    const { classList, tagName, parentElement } = e.target as HTMLLIElement;
+    if (correct) {
+        removeClassFromAnswer('correct', tagName, classList, parentElement);
+    } else {
+        removeClassFromAnswer('incorrect', tagName, classList, parentElement)
+    }
+}

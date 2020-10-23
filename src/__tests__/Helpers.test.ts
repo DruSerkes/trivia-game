@@ -1,6 +1,6 @@
 import { renderColor } from '../helpers/renderColor'
 import { shuffle } from '../helpers/shuffle'
-import { addClassToAnswer, showIfCorrect, removeClassFromAnswer } from '../helpers/addClass'
+import { addClassToAnswer, showIfCorrect, removeClassFromAnswer, removeFeedback } from '../helpers/addClass'
 
 
 describe('helpers tests', () => {
@@ -45,5 +45,29 @@ describe('helpers tests', () => {
         testElement.addEventListener('click', (e) => showIfCorrect(e, false));
         testElement.click();
         expect(testElement.classList).toContain('incorrect');
+    })
+
+    test('removeFeedback removes correct', () => {
+        const testElement = document.createElement('li');
+        testElement.addEventListener('click', (e) => showIfCorrect(e, true));
+        testElement.click();
+        expect(testElement.classList).toContain('correct');
+        testElement.removeEventListener('click', showIfCorrect);
+        testElement.addEventListener('click', (e) => removeFeedback(e, true));
+        testElement.click();
+        expect(testElement.classList).not.toContain('incorrect');
+
+    })
+
+    test('removeFeedback removes incorrect', () => {
+        const testElement = document.createElement('li');
+        testElement.addEventListener('click', (e) => showIfCorrect(e, false));
+        testElement.click();
+        expect(testElement.classList).toContain('incorrect');
+        testElement.removeEventListener('click', showIfCorrect);
+        testElement.addEventListener('click', (e) => removeFeedback(e, false));
+        testElement.click();
+        expect(testElement.classList).not.toContain('incorrect');
+
     })
 })
