@@ -23,3 +23,5 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
         addClassToAnswer('incorrect', tagName, classList, parentElement)
     }
 }
+
+// TODO export const removeFeedback
