@@ -1,6 +1,6 @@
 import { renderColor } from '../helpers/renderColor'
 import { shuffle } from '../helpers/shuffle'
-import { addClassToAnswer, showIfCorrect, removeClassFromAnswer, removeFeedback } from '../helpers/addClass'
+import { addClassToAnswer, showIfCorrect, removeClassFromAnswer, removeFeedback } from '../helpers/addAndRemoveClass'
 
 
 describe('helpers tests', () => {

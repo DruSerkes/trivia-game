@@ -4,7 +4,7 @@ import { shuffle } from '../helpers/shuffle';
 import { QuestionType } from '../redux/types';
 import { Answer } from './Answer';
 import { Box, Typography, List } from '@material-ui/core';
-import { showIfCorrect } from '../helpers/addClass';
+import { showIfCorrect } from '../helpers/addAndRemoveClass';
 
 type QuizCardProps = {
     question: QuestionType;
