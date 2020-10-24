@@ -26,7 +26,7 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
             hideFeedback();
             answerQuestion(answer);
             chosen.current = false;
-        }, 800);
+        }, 1000);
     };
 
     return (

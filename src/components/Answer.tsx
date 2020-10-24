@@ -14,7 +14,7 @@ export function Answer({ answer, handleAnswerQuestion, correct }: AnswerProps) {
     const renderHTML = () => (<span className="AnswerText" dangerouslySetInnerHTML={{ __html: answer }} />);
     const handleClick = ({ nativeEvent: e }: React.MouseEvent) => {
         handleAnswerQuestion(answer, e, correct);
-        setTimeout(() => setMounted(!mounted), 500);
+        setTimeout(() => setMounted(!mounted), 1000);
     };
 
     useEffect(() => removeSelectedAndShowCorrect(), [mounted]);
