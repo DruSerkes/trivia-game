@@ -1,3 +1,6 @@
+
+// TODO: fix this to take numQuestions and divide by it 
+// --- should fix color rendering for different number of questions other than 10
 export const renderColor = (numCorrect: number) => {
     if (numCorrect < 3) {
         return 'red';
