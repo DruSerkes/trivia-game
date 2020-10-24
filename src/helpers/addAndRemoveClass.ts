@@ -18,10 +18,10 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
     if (!e.target) return;
     const { classList, tagName, parentElement } = e.target as HTMLLIElement;
     if (correct) {
-        addClassToAnswer('correct', tagName, classList, parentElement);
+        addClassToAnswer('selected', tagName, classList, parentElement);
     } else {
         addShowCorrect();
-        addClassToAnswer('incorrect', tagName, classList, parentElement);
+        addClassToAnswer('selected', tagName, classList, parentElement);
     }
 }
 // TODO: change logic entirely 
@@ -52,7 +52,10 @@ export const removeFeedback = (e: MouseEvent, correct?: Boolean | null): void =>
 export const removeClassFromAnswers = () => {
     const answerElements = document.querySelectorAll('.Answer');
     Array.from(answerElements).forEach((el) => {
-        el.classList.remove('correct');
-        el.classList.remove('incorrect');
+        el.classList.remove('selected');
+        el.classList.remove('show-correct');
+        // el.classList.remove('incorrect');
     });
+    // const correctAnswer = document.querySelector('.Correct-Answer');
+    // correctAnswer?.classList.remove('show-correct');
 }
