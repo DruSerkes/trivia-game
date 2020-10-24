@@ -24,10 +24,7 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
         addClassToAnswer('selected', tagName, classList, parentElement);
     }
 }
-// TODO: 
-//  --- update tests   
 
-// TODO -- test this
 export const addShowCorrect = () => {
     const correctAnswer = document.querySelector('.Correct-Answer');
     correctAnswer?.classList.add('show-correct');
