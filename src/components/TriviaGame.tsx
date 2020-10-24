@@ -6,8 +6,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { StoreType } from '../redux/store';
 import { Start } from '../components/Start';
 import { getQuestions, removeQuestions } from '../redux/actions';
-import { Box } from '@material-ui/core'
-
+import { Box } from '@material-ui/core';
+import { Feedback } from './Feedback'
 
 const INITIAL_QUESTION_STATE = {
 	question: '',
@@ -53,6 +53,7 @@ export const TriviaGame = () => {
 
 			{(numAnswered === questions.length || !questions.length) && <Start startGame={startGame} />}
 
+			<Feedback />
 		</Box>
 
 	);
