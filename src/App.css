@@ -84,12 +84,17 @@ html {
     justify-content: space-around;
 }
 
-.correct {
+.Correct-Answer.selected {
 	background-color: green;
 }
 
-.incorrect {
+.Incorrect-Answer.selected {
 	background-color: red;
+}
+
+.show-correct {
+	background-color: rgb(153, 228, 153);
+	opacity: 0.75;
 }
 
 @keyframes App-logo-spin {

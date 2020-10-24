@@ -23,7 +23,7 @@ export function Answer({ answer, handleAnswerQuestion, correct }: AnswerProps) {
     if (correct) {
         return <ListItem id={answer} className="Answer Correct-Answer" divider onClick={handleClick} >{renderHTML()}</ListItem>;
     } else {
-        return <ListItem id={answer} className="Answer" divider onClick={handleClick} >{renderHTML()}</ListItem>;
+        return <ListItem id={answer} className="Answer Incorrect-Answer" divider onClick={handleClick} >{renderHTML()}</ListItem>;
     }
 
 }
