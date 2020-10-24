@@ -49,11 +49,8 @@ describe('helpers tests', () => {
 
     test('removeFeedback removes correct', () => {
         const testElement = document.createElement('li');
-        // testElement.addEventListener('click', (e) => showIfCorrect(e, true));
-        // testElement.click();
         testElement.classList.add('correct')
         expect(testElement.classList).toContain('correct');
-        // testElement.removeEventListener('click', showIfCorrect);
         testElement.addEventListener('click', (e) => removeFeedback(e, true));
         testElement.click();
         expect(testElement.classList).not.toContain('selected');
@@ -62,8 +59,6 @@ describe('helpers tests', () => {
 
     test('removeFeedback removes incorrect', () => {
         const testElement = document.createElement('li');
-        // testElement.addEventListener('click', (e) => showIfCorrect(e, false));
-        // testElement.click();
         testElement.classList.add('incorrect')
         expect(testElement.classList).toContain('incorrect');
         testElement.removeEventListener('click', showIfCorrect);
