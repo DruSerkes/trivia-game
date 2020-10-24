@@ -1,6 +1,6 @@
 import { renderColor } from '../helpers/renderColor'
 import { shuffle } from '../helpers/shuffle'
-import { addClassToAnswer, showIfCorrect, removeClassFromAnswer, removeFeedback, removeSelectedAndShowCorrect } from '../helpers/addAndRemoveClass'
+import { addClassToAnswer, showIfCorrect, removeClassFromAnswer, removeFeedback, removeSelectedAndShowCorrect, addShowCorrect } from '../helpers/addAndRemoveClass'
 
 
 describe('helpers tests', () => {
@@ -76,5 +76,14 @@ describe('helpers tests', () => {
         removeSelectedAndShowCorrect();
         expect(testElement.classList).not.toContain('selected');
         expect(testElement.classList).not.toContain('show-correct');
+    })
+
+    test('addShowCorrect adds class show-correct to Correct-Answer', () => {
+        const testElement = document.createElement('p');
+        testElement.classList.add('Correct-Answer');
+        document.body.append(testElement);
+        expect(testElement.classList).not.toContain('show-correct');
+        addShowCorrect();
+        expect(testElement.classList).toContain('show-correct');
     })
 })
