@@ -20,7 +20,7 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
     if (correct) {
         addClassToAnswer('correct', tagName, classList, parentElement);
     } else {
-        // call a fn that looks for answer with class 'Correct-Answer' and adds class 'show-correct'
+        addShowCorrect();
         addClassToAnswer('incorrect', tagName, classList, parentElement);
     }
 }
@@ -32,7 +32,12 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
 // change correct and incorrect styles to only work if also has the class: 'selected' 
 // add styles for show-correct
 // have removeClassFromAnswers remove 'show-correct'
-// export const 
+
+// TODO -- test this
+export const addShowCorrect = () => {
+    const correctAnswer = document.querySelector('.Correct-Answer');
+    correctAnswer?.classList.add('show-correct');
+}
 
 export const removeFeedback = (e: MouseEvent, correct?: Boolean | null): void => {
     if (!e.target) return;
