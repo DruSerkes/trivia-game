@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { ListItem } from '@material-ui/core'
 import { removeClassFromAnswers } from '../helpers/addAndRemoveClass'
 
@@ -9,7 +9,6 @@ type AnswerProps = {
     correct?: boolean | null;
 }
 
-// TODO: if correct, render it with a class for correct answer 
 export function Answer({ answer, handleAnswerQuestion, correct }: AnswerProps) {
     const [mounted, setMounted] = useState(true);
     const renderHTML = () => (<span className="AnswerText" dangerouslySetInnerHTML={{ __html: answer }} />);
