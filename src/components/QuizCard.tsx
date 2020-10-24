@@ -5,6 +5,7 @@ import { QuestionType } from '../redux/types';
 import { Answer } from './Answer';
 import { Box, Typography, List } from '@material-ui/core';
 import { showIfCorrect } from '../helpers/addAndRemoveClass';
+import { showFeedback, hideFeedback } from '../helpers/showFeedback';
 
 type QuizCardProps = {
     question: QuestionType;
@@ -20,10 +21,12 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
         if (chosen.current) return;
         chosen.current = true;
         showIfCorrect(e, correct);
+        showFeedback(correct);
         setTimeout(() => {
+            hideFeedback();
             answerQuestion(answer);
             chosen.current = false;
-        }, 600);
+        }, 800);
     };
 
     return (
