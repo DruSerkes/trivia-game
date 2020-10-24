@@ -46,13 +46,13 @@ export const TriviaGame = () => {
 
 	return (
 		<Box className="TriviaGame">
-			{numAnswered < questions.length && currentQuestion !== INITIAL_QUESTION_STATE &&
-				<QuizCard question={currentQuestion} answerQuestion={answerQuestion} />
-			}
-			{ questions.length !== 0 && numAnswered === questions.length && (
-				<Result numCorrect={numCorrect} numAnswered={numAnswered} />
-			)}
+
+			{numAnswered < questions.length && currentQuestion !== INITIAL_QUESTION_STATE && <QuizCard question={currentQuestion} answerQuestion={answerQuestion} />}
+
+			{ questions.length !== 0 && numAnswered === questions.length && <Result numCorrect={numCorrect} numAnswered={numAnswered} />}
+
 			{(numAnswered === questions.length || !questions.length) && <Start startGame={startGame} />}
+
 		</Box>
 
 	);
