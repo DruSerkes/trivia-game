@@ -12,7 +12,7 @@ exports[`Result Matches Snapshot  1`] = `
     </h3>
     <p
       class="MuiTypography-root MuiTypography-body1"
-      style="color: blue;"
+      style="color: green;"
     >
       You answered 666 out of 667 correct
     </p>
