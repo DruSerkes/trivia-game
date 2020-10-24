@@ -21,6 +21,7 @@ export const QuizCard = ({ question, answerQuestion }: QuizCardProps) => {
     const answers: string[] = question?.incorrect_answers.concat(question.correct_answer);
     const shuffledAnswers: string[] = shuffle(answers);
 
+    // TODO Start here tomorrow....
     const handleAnswerQuestion = (answer: string, e: MouseEvent, correct: boolean | null | undefined): void => {
         if (chosen.current) return;
         chosen.current = true;
