@@ -15,7 +15,7 @@ exports[`QuizCard Matches Snapshot  1`] = `
       class="MuiList-root QuizCardList MuiList-padding"
     >
       <li
-        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+        class="MuiListItem-root Answer Correct-Answer MuiListItem-gutters MuiListItem-divider"
         id="true"
       >
         <span
@@ -25,7 +25,7 @@ exports[`QuizCard Matches Snapshot  1`] = `
         </span>
       </li>
       <li
-        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+        class="MuiListItem-root Answer Incorrect-Answer MuiListItem-gutters MuiListItem-divider"
         id="false"
       >
         <span
@@ -35,7 +35,7 @@ exports[`QuizCard Matches Snapshot  1`] = `
         </span>
       </li>
       <li
-        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+        class="MuiListItem-root Answer Incorrect-Answer MuiListItem-gutters MuiListItem-divider"
         id="falsey"
       >
         <span
@@ -45,7 +45,7 @@ exports[`QuizCard Matches Snapshot  1`] = `
         </span>
       </li>
       <li
-        class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+        class="MuiListItem-root Answer Incorrect-Answer MuiListItem-gutters MuiListItem-divider"
         id="false-ish"
       >
         <span

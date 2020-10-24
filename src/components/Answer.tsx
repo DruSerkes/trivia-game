@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { ListItem } from '@material-ui/core'
-import { removeClassFromAnswers } from '../helpers/addAndRemoveClass'
+import { removeSelectedAndShowCorrect } from '../helpers/addAndRemoveClass'
 
 type AnswerProps = {
     answer: string;
@@ -17,7 +17,7 @@ export function Answer({ answer, handleAnswerQuestion, correct }: AnswerProps) {
         setTimeout(() => setMounted(!mounted), 500);
     };
 
-    useEffect(() => removeClassFromAnswers(), [mounted]);
+    useEffect(() => removeSelectedAndShowCorrect(), [mounted]);
 
     if (correct) {
         return <ListItem id={answer} className="Answer Correct-Answer" divider onClick={handleClick} >{renderHTML()}</ListItem>;

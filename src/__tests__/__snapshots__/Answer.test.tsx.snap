@@ -3,7 +3,7 @@
 exports[`Answer tests matches snapshot 1`] = `
 <DocumentFragment>
   <li
-    class="MuiListItem-root Answer MuiListItem-gutters MuiListItem-divider"
+    class="MuiListItem-root Answer Incorrect-Answer MuiListItem-gutters MuiListItem-divider"
     id="lets test"
   >
     <span

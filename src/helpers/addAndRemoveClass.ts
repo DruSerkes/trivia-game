@@ -43,7 +43,7 @@ export const removeFeedback = (e: MouseEvent, correct?: Boolean | null): void =>
     }
 }
 
-export const removeClassFromAnswers = () => {
+export const removeSelectedAndShowCorrect = () => {
     const answerElements = document.querySelectorAll('.Answer');
     Array.from(answerElements).forEach((el) => {
         el.classList.remove('selected');

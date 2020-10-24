@@ -1,6 +1,6 @@
 import { renderColor } from '../helpers/renderColor'
 import { shuffle } from '../helpers/shuffle'
-import { addClassToAnswer, showIfCorrect, removeClassFromAnswer, removeFeedback, removeClassFromAnswers } from '../helpers/addAndRemoveClass'
+import { addClassToAnswer, showIfCorrect, removeClassFromAnswer, removeFeedback, removeSelectedAndShowCorrect } from '../helpers/addAndRemoveClass'
 
 
 describe('helpers tests', () => {
@@ -11,11 +11,11 @@ describe('helpers tests', () => {
     })
 
     test('renderColor', () => {
-        expect(renderColor(2)).toEqual('red');
-        expect(renderColor(4)).toEqual('orange');
-        expect(renderColor(6)).toEqual('yellow');
-        expect(renderColor(8)).toEqual('green');
-        expect(renderColor(10)).toEqual('blue')
+        expect(renderColor(2, 10)).toEqual('red');
+        expect(renderColor(4, 10)).toEqual('orange');
+        expect(renderColor(6, 10)).toEqual('yellow');
+        expect(renderColor(8, 10)).toEqual('green');
+        expect(renderColor(10, 10)).toEqual('blue')
     })
 
     test('addClassToAnswer', () => {
@@ -33,51 +33,53 @@ describe('helpers tests', () => {
         expect(testElement.classList).not.toContain(testClass);
     })
 
-    test('showIfCorrect adds correct', () => {
+    test('showIfCorrect adds selected', () => {
         const testElement = document.createElement('li');
         testElement.addEventListener('click', (e) => showIfCorrect(e, true));
         testElement.click();
-        expect(testElement.classList).toContain('correct');
+        expect(testElement.classList).toContain('selected');
     })
 
-    test('showIfCorrect adds incorrect', () => {
+    test('showIfCorrect adds selected to incorrect', () => {
         const testElement = document.createElement('li');
         testElement.addEventListener('click', (e) => showIfCorrect(e, false));
         testElement.click();
-        expect(testElement.classList).toContain('incorrect');
+        expect(testElement.classList).toContain('selected');
     })
 
     test('removeFeedback removes correct', () => {
         const testElement = document.createElement('li');
-        testElement.addEventListener('click', (e) => showIfCorrect(e, true));
-        testElement.click();
+        // testElement.addEventListener('click', (e) => showIfCorrect(e, true));
+        // testElement.click();
+        testElement.classList.add('correct')
         expect(testElement.classList).toContain('correct');
-        testElement.removeEventListener('click', showIfCorrect);
+        // testElement.removeEventListener('click', showIfCorrect);
         testElement.addEventListener('click', (e) => removeFeedback(e, true));
         testElement.click();
-        expect(testElement.classList).not.toContain('incorrect');
+        expect(testElement.classList).not.toContain('selected');
 
     })
 
     test('removeFeedback removes incorrect', () => {
         const testElement = document.createElement('li');
-        testElement.addEventListener('click', (e) => showIfCorrect(e, false));
-        testElement.click();
+        // testElement.addEventListener('click', (e) => showIfCorrect(e, false));
+        // testElement.click();
+        testElement.classList.add('incorrect')
         expect(testElement.classList).toContain('incorrect');
         testElement.removeEventListener('click', showIfCorrect);
         testElement.addEventListener('click', (e) => removeFeedback(e, false));
         testElement.click();
-        expect(testElement.classList).not.toContain('incorrect');
+        expect(testElement.classList).not.toContain('selected');
     })
 
-    test('removeClassFromAnswers removes correct and incorrect', () => {
+    test('removeSelectedAndShowCorrect removes selected and show-correct', () => {
         const testElement = document.createElement('p');
-        testElement.classList.add('correct');
-        testElement.classList.add('incorrect');
+        testElement.classList.add('selected');
+        testElement.classList.add('show-correct');
         testElement.classList.add('Answer');
         document.body.append(testElement)
-        removeClassFromAnswers();
-        expect(testElement.classList).not.toContain('correct');
-        expect(testElement.classList).not.toContain('incorrect');
+        removeSelectedAndShowCorrect();
+        expect(testElement.classList).not.toContain('selected');
+        expect(testElement.classList).not.toContain('show-correct');
     })
 })
