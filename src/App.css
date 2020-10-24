@@ -97,6 +97,11 @@ html {
 	opacity: 0.75;
 }
 
+.Feedback {
+	margin: 2rem auto;
+	font-size: 1.5rem;
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
