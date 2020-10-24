@@ -24,14 +24,8 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
         addClassToAnswer('selected', tagName, classList, parentElement);
     }
 }
-// TODO: change logic entirely 
-// keep correct and incorrect styles, but have this fn ^ add class: 'selected'
+// TODO: 
 //  --- update tests   
-//  --- update fn removeClassFromAnswers 
-//  --- update tests 
-// change correct and incorrect styles to only work if also has the class: 'selected' 
-// add styles for show-correct
-// have removeClassFromAnswers remove 'show-correct'
 
 // TODO -- test this
 export const addShowCorrect = () => {
@@ -54,8 +48,5 @@ export const removeClassFromAnswers = () => {
     Array.from(answerElements).forEach((el) => {
         el.classList.remove('selected');
         el.classList.remove('show-correct');
-        // el.classList.remove('incorrect');
     });
-    // const correctAnswer = document.querySelector('.Correct-Answer');
-    // correctAnswer?.classList.remove('show-correct');
 }
