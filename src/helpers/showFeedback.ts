@@ -1,5 +1,5 @@
-const correctResponses = ['Correct!!', 'That\'s Right!!', 'You got it right!', 'Good job!', 'Well done!', 'Strong work there!!']
-const incorrectResponses = ['Wrong', 'Not quite', 'That\'s not it', 'Sorry', 'Uh oh', 'Whoops']
+export const correctResponses = ['Correct!!', 'That\'s Right!!', 'You got it right!', 'Good job!', 'Well done!', 'Strong work there!!']
+export const incorrectResponses = ['Wrong', 'Not quite', 'That\'s not it', 'Sorry', 'Uh oh', 'Whoops']
 
 export const showFeedback = (correct?: boolean | null) => {
     const feedback = document.querySelector('.Feedback');
