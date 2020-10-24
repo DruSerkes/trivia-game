@@ -20,9 +20,19 @@ export const showIfCorrect = (e: MouseEvent, correct?: Boolean | null): void => 
     if (correct) {
         addClassToAnswer('correct', tagName, classList, parentElement);
     } else {
+        // call a fn that looks for answer with class 'Correct-Answer' and adds class 'show-correct'
         addClassToAnswer('incorrect', tagName, classList, parentElement);
     }
 }
+// TODO: change logic entirely 
+// keep correct and incorrect styles, but have this fn ^ add class: 'selected'
+//  --- update tests   
+//  --- update fn removeClassFromAnswers 
+//  --- update tests 
+// change correct and incorrect styles to only work if also has the class: 'selected' 
+// add styles for show-correct
+// have removeClassFromAnswers remove 'show-correct'
+// export const 
 
 export const removeFeedback = (e: MouseEvent, correct?: Boolean | null): void => {
     if (!e.target) return;
