@@ -8,7 +8,7 @@ import { Typography, Box } from '@material-ui/core'
 function App() {
       return (
             <Box className="App">
-                  <Typography gutterBottom variant="h1">Trivia Game!</Typography>
+                  <Typography gutterBottom variant="h1">Trivia!</Typography>
                   <TriviaGame />
             </Box>);
 }
