@@ -16,6 +16,11 @@ exports[`Result Matches Snapshot  1`] = `
     >
       You answered 666 out of 667 correct
     </p>
+    <h5
+      class="MuiTypography-root MuiTypography-h5"
+    >
+      Play Again?
+    </h5>
   </div>
 </DocumentFragment>
 `;

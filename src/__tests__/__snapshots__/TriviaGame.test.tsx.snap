@@ -381,6 +381,10 @@ exports[`TriviaGame tests matches snapshot 1`] = `
         />
       </button>
     </div>
+    <p
+      class="Feedback"
+      data-testid="Feedback"
+    />
   </div>
 </DocumentFragment>
 `;

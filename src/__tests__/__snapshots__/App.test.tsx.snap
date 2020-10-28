@@ -8,7 +8,7 @@ exports[`App renders without breaking  1`] = `
     <h1
       class="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom"
     >
-      Trivia Game!
+      Let's Trivia!
     </h1>
     <div
       class="MuiBox-root MuiBox-root-2 TriviaGame"
@@ -389,7 +389,25 @@ exports[`App renders without breaking  1`] = `
           />
         </button>
       </div>
+      <p
+        class="Feedback"
+        data-testid="Feedback"
+      />
     </div>
+    <footer
+      class="Footer"
+    >
+      <p>
+        <a
+          data-testid="footer"
+          href="https://github.com/druserkes"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Dru Serkes ©2020
+        </a>
+      </p>
+    </footer>
   </div>
 </DocumentFragment>
 `;
