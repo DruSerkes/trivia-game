@@ -111,6 +111,16 @@ html {
 	color: red;
 }
 
+.Footer {
+	position: absolute;
+    bottom: 0;
+	width: 100%;
+}
+
+.Footer a {
+	color: inherit;
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
@@ -136,5 +146,8 @@ html {
 	}
 	.MuiFormGroup-row {
 		justify-content: left;
+	}
+	.Footer {
+		position: relative;
 	}
 }
