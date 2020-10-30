@@ -11,10 +11,15 @@ export const Start = ({ startGame }: StartProps) => {
     const [difficulty, setDifficulty] = useState<string>('');
     const [type, setType] = useState<string>('multiple');
 
-    const handleChangeAmount = (e: React.ChangeEvent<HTMLInputElement>): void => setAmount(e.target.value);
+    const handleSubmit = () => startGame(amount, difficulty, type);
     const handleChangeDifficulty = (e: React.ChangeEvent<HTMLInputElement>): void => setDifficulty(e.target.value);
     const handleChangeType = (e: React.ChangeEvent<HTMLInputElement>): void => setType(e.target.value);
-    const handleSubmit = () => startGame(amount, difficulty, type);
+    const handleChangeAmount = (e: React.ChangeEvent<HTMLInputElement>): void => {
+        let val = Number(e.target.value);
+        val = val > 20 ? 20 : val < 1 ? 1 : val;
+        setAmount(String(Math.floor(val)))
+    };
+
 
     return (
         <Box className="Start">
