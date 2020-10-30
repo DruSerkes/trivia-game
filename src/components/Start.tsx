@@ -16,8 +16,8 @@ export const Start = ({ startGame }: StartProps) => {
     const handleChangeType = (e: React.ChangeEvent<HTMLInputElement>): void => setType(e.target.value);
     const handleChangeAmount = (e: React.ChangeEvent<HTMLInputElement>): void => {
         let val = Number(e.target.value);
-        val = val > 20 ? 20 : val < 1 ? 1 : val;
-        setAmount(String(Math.floor(val)))
+        val = val > 20 ? 20 : val < 1 ? 1 : Math.floor(val);
+        setAmount(String(val));
     };
 
 
