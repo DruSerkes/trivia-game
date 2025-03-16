@@ -1,153 +1,174 @@
 :root {
-	--background-active : dimgray;
-	--primary-color-text: whitesmoke;
+  --background-active: dimgray;
+  --primary-color-text: whitesmoke;
 }
 
 html {
-	min-height: 100vh;
-	height: fit-content;
+  min-height: 100vh;
+  height: fit-content;
 }
 
 .App {
-	text-align: center;
-	background-color: #181818;
-	color: var(--primary-color-text);
-	min-height: 100vh;
-	height: 100%;
-	padding: 1.25rem;
+  text-align: center;
+  background-color: #181818;
+  color: var(--primary-color-text);
+  min-height: 100vh;
+  height: 100%;
+  padding: 1.25rem;
 }
 
 .Start {
-	position: relative;
-	width: 35%;
-	margin: 0 auto;
-	padding: 1.5rem;
-	border-radius: 10px;
-	background-color: var(--background-active);
-	color: var(--primary-color-text);
+  position: relative;
+  width: 35%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--background-active);
+  color: var(--primary-color-text);
 }
 
-.Start fieldset{
-	margin: 1rem;
+.Start fieldset {
+  margin: 1rem;
 }
 
 .Start legend {
-	color: var(--primary-color-text);
-	text-decoration: underline;
+  color: var(--primary-color-text);
+  text-decoration: underline;
 }
 
 .Start span {
-	font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .Start label {
-	color: var(--primary-color-text);
-	text-decoration: underline;
+  color: var(--primary-color-text);
+  text-decoration: underline;
 }
 
 .Start button {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .MuiFormGroup-row {
-	display: flex;
-	justify-content: center;
-	align-items: baseline;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .QuizCard {
-	background-color: var(--background-active);
-    width: 69%;
-    margin: 0 auto;
-    padding: 1rem 1rem 0;
-    border: 2px solid white;
-    border-radius: 5px;
+  background-color: var(--background-active);
+  width: 69%;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
+  border: 2px solid white;
+  border-radius: 5px;
 }
 
 .Answer {
-	cursor: pointer;
-	border-radius: 5px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .AnswerText {
-	margin: 1.25rem auto;
-    font-size: 19px;
-	color: var(--primary-color-text);
-	font-style: oblique;
+  margin: 1.25rem auto;
+  font-size: 19px;
+  color: var(--primary-color-text);
+  font-style: oblique;
 }
 
 .Result {
-	margin: 2rem auto 0;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  margin: 2rem auto 0;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .Correct-Answer.selected {
-	background-color: green;
+  background-color: green;
 }
 
 .Incorrect-Answer.selected {
-	background-color: red;
+  background-color: red;
 }
 
 .show-correct {
-	background-color: rgb(153, 228, 153);
-	opacity: 0.75;
+  background-color: rgb(153, 228, 153);
+  opacity: 0.75;
 }
 
 .Feedback {
-	margin: 2.75rem auto;
-	font-size: 1.5rem;
-	display: hidden;
+  margin: 2.75rem auto;
+  font-size: 1.5rem;
+  display: hidden;
 }
 
 .Feedback.correct {
-	color: green;
+  color: green;
 }
 
 .Feedback.incorrect {
-	color: red;
+  color: red;
 }
 
 .Footer {
-	position: absolute;
-    bottom: 0;
-	width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .Footer a {
-	color: inherit;
+  color: inherit;
+}
+
+.Footer:hover {
+  animation: wowow 1s normal;
 }
 
 @keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
+@keyframes wowow {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-@media screen and (max-width: 380px){
-	.Start {
-		width: 70%;
-	}
-	.Start button {
-		font-size: 1rem;
-	}
-	.QuizCard {
-		width: 90%;
-	}
-	.Start fieldset{
-		margin: 2rem;
-	}
-	.MuiFormGroup-row {
-		justify-content: left;
-	}
-	.Footer {
-		position: relative;
-	}
+@media screen and (max-width: 380px) {
+  .Start {
+    width: 70%;
+  }
+  .Start button {
+    font-size: 1rem;
+  }
+  .QuizCard {
+    width: 90%;
+  }
+  .Start fieldset {
+    margin: 2rem;
+  }
+  .MuiFormGroup-row {
+    justify-content: left;
+  }
+  .Footer {
+    position: relative;
+  }
 }
